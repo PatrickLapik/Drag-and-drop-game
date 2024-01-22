@@ -1,0 +1,22 @@
+{
+  "example1": {
+    "id": 1,
+    "item": "A",
+    "answer": "B"
+  },
+  "example2": {
+    "id": 2,
+    "item": "A",
+    "answer": "B"
+  },
+  "example3": {
+    "id": 3,
+    "item": "A",
+    "answer": "B"
+  },
+  "example4": {
+    "id": 4,
+    "item": "A",
+    "answer": "B"
+  }
+}

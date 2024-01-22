@@ -1,0 +1,19 @@
+.items {
+  border: solid black 2px;
+  text-align: center;
+  width: 100%;
+}
+
+.answers {
+  border: solid black 2px;
+  text-align: center;
+  width: 100%;
+}
+
+.item {
+  border: solid black 1px;
+}
+
+.answer {
+  border: dotted black 1px;
+}
