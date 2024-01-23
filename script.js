@@ -29,8 +29,11 @@ function displayData(jsonData, targetElementId) {
 			dataBox.classList.add(...divStyleItem);
 		} else {
 			const divStyleAnswer = [
-				"bg-white",
+				"flex",
+				"self-center",
+				"justify-center",
 				"text-center",
+				"bg-white",
 				"border-4",
 				"border-violet-400",
 				"border-dotted",
