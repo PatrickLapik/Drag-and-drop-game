@@ -1,72 +1,80 @@
 function displayData(jsonData, targetElementId) {
-	const jsonDisplayElement = document.getElementById(targetElementId);
+  const jsonDisplayElement = document.getElementById(targetElementId);
 
-	Object.keys(jsonData).forEach((key) => {
-		const data = jsonData[key];
+  Object.keys(jsonData).forEach((key) => {
+    const data = jsonData[key];
 
-		const dataBox = document.createElement("div");
+    const dataBox = document.createElement("div");
 
-		dataBox.innerHTML =
-			targetElementId === "itemDisplay" ? `${data.item}` : `${data.answer}`;
+    dataBox.innerHTML =
+      targetElementId === "itemDisplay" ? `${data.item}` : `${data.answer}`;
 
-		const answerId = data.id;
+    const answerId = data.id;
 
-		if (targetElementId === "itemDisplay") {
-			dataBox.setAttribute("draggable", "true");
+    if (targetElementId === "itemDisplay") {
+      dataBox.setAttribute("draggable", "true");
 
-			dataBox.addEventListener("dragstart", (event) => {
-				event.dataTransfer.setData("text/plain", JSON.stringify(data));
-			});
+      dataBox.addEventListener("dragstart", (event) => {
+        dataBox.classList.add("dragging");
+        event.dataTransfer.setData("text/plain", JSON.stringify(data));
+      });
 
-			const divStyleItem = [
-				"bg-violet-100",
-				"text-center",
-				"border-4",
-				"border-violet-400",
-				"rounded-xl",
-				"p-4",
-			];
-			dataBox.classList.add(...divStyleItem);
-		} else {
-			const divStyleAnswer = [
-				"flex",
-				"self-center",
-				"justify-center",
-				"text-center",
-				"bg-white",
-				"border-4",
-				"border-violet-400",
-				"border-dotted",
-				"rounded-xl",
-				"p-4",
-			];
-			dataBox.classList.add(...divStyleAnswer);
-		}
+      dataBox.addEventListener("dragend", () => {
+        dataBox.classList.remove("dragging");
+      });
 
-		dataBox.addEventListener("dragover", (event) => {
-			event.preventDefault();
-		});
+      const divStyleItem = [
+        "bg-violet-100",
+        "text-center",
+        "border-4",
+        "border-violet-400",
+        "rounded-xl",
+        "p-4",
+      ];
+      dataBox.classList.add(...divStyleItem);
+    } else {
+      const divStyleAnswer = [
+        "flex",
+        "self-center",
+        "justify-center",
+        "text-center",
+        "bg-white",
+        "border-4",
+        "border-violet-400",
+        "border-dotted",
+        "rounded-xl",
+        "p-4",
+      ];
+      dataBox.classList.add(...divStyleAnswer);
+    }
 
-		dataBox.addEventListener("drop", (event) => {
-			event.preventDefault();
+    dataBox.addEventListener("dragover", (event) => {
+      event.preventDefault();
+    });
 
-			const draggedData = JSON.parse(event.dataTransfer.getData("text/plain"));
+    dataBox.addEventListener("drop", (event) => {
+      event.preventDefault();
 
-			if (draggedData.id == answerId) {
-				console.log("Match");
-			} else {
-				console.log("No match");
-			}
-		});
+      const draggingItem = document.querySelector(".dragging");
 
-		jsonDisplayElement.appendChild(dataBox);
-	});
+      const draggedData = JSON.parse(event.dataTransfer.getData("text/plain"));
+
+      if (draggedData.id == answerId) {
+        console.log("Match");
+        event.target.appendChild(draggingItem);
+      } else {
+        console.log("No match");
+      }
+    });
+
+    jsonDisplayElement.appendChild(dataBox);
+  });
 }
 
 fetch("data.json")
-	.then((response) => response.json())
-	.then((jsonData) => {
-		displayData(jsonData, "itemDisplay");
+  .then((response) => response.json())
+  .then((jsonData) => {
+    displayData(jsonData, "itemDisplay");
 
-		displayData(jsonData, "answerDisplay");
-	});
+    displayData(jsonData, "answerDisplay");
+  });
