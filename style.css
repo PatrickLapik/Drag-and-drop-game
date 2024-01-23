@@ -1,19 +1,8 @@
-.items {
-  border: solid black 2px;
-  text-align: center;
-  width: 100%;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap");
 
-.answers {
-  border: solid black 2px;
-  text-align: center;
-  width: 100%;
-}
-
-.item {
-  border: solid black 1px;
-}
-
-.answer {
-  border: dotted black 1px;
+* {
+	font-family: "Press Start 2P", system-ui;
+	font-weight: 400;
+	font-size: 12px;
+	font-style: normal;
 }

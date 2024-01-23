@@ -1,22 +1,77 @@
 {
-  "example1": {
-    "id": 1,
-    "item": "A",
-    "answer": "B"
-  },
-  "example2": {
-    "id": 2,
-    "item": "A",
-    "answer": "B"
-  },
-  "example3": {
-    "id": 3,
-    "item": "A",
-    "answer": "B"
-  },
-  "example4": {
-    "id": 4,
-    "item": "A",
-    "answer": "B"
-  }
+	"bibliopole": {
+		"id": 1,
+		"item": "Bibliopole",
+		"answer": "Sells rare books."
+	},
+	"quire": {
+		"id": 2,
+		"item": "Quire",
+		"answer": "Set of 24-25 sheets for bookbinding."
+	},
+	"sesquipedalian": {
+		"id": 3,
+		"item": "Sesquipedalian",
+		"answer": "Uses long words; long-winded."
+	},
+	"zarf": {
+		"id": 4,
+		"item": "Zarf",
+		"answer": "Metal cup holder without a handle."
+	},
+	"peregrinate": {
+		"id": 5,
+		"item": "Peregrinate",
+		"answer": "Travel or wander around."
+	},
+	"philoprogenitive": {
+		"id": 6,
+		"item": "Philoprogenitive",
+		"answer": "Fond of children; produces offspring."
+	},
+	"quixotic": {
+		"id": 7,
+		"item": "Quixotic",
+		"answer": "Extremely idealistic."
+	},
+	"cacophony": {
+		"id": 8,
+		"item": "Cacophony",
+		"answer": "Harsh, discordant mixture of sounds."
+	},
+	"nudiustertian": {
+		"id": 9,
+		"item": "Nudiustertian",
+		"answer": "Relating to the day before yesterday."
+	},
+	"xenization": {
+		"id": 10,
+		"item": "Xenization",
+		"answer": "Traveling as a stranger in a foreign land."
+	},
+	"bibliopolic": {
+		"id": 11,
+		"item": "Bibliopolic",
+		"answer": "Relating to buying and selling books."
+	},
+	"umbra": {
+		"id": 12,
+		"item": "Umbra",
+		"answer": "Fully shaded inner region of a shadow."
+	},
+	"limerence": {
+		"id": 13,
+		"item": "Limerence",
+		"answer": "Intense infatuation with another person."
+	},
+	"ephemeral": {
+		"id": 14,
+		"item": "Ephemeral",
+		"answer": "Lasting for a very short time; transient."
+	},
+	"hapax_legomenon": {
+		"id": 15,
+		"item": "Hapax Legomenon",
+		"answer": "Word or phrase occurring only once in a text."
+	}
 }

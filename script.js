@@ -1,54 +1,69 @@
 function displayData(jsonData, targetElementId) {
-  const jsonDisplayElement = document.getElementById(targetElementId);
+	const jsonDisplayElement = document.getElementById(targetElementId);
 
-  Object.keys(jsonData).forEach((key) => {
-    const data = jsonData[key];
+	Object.keys(jsonData).forEach((key) => {
+		const data = jsonData[key];
 
-    const dataBox = document.createElement("div");
+		const dataBox = document.createElement("div");
 
-    const dataContent = document.createElement("p");
+		dataBox.innerHTML =
+			targetElementId === "itemDisplay" ? `${data.item}` : `${data.answer}`;
 
-    dataContent.innerHTML =
-      targetElementId === "itemDisplay" ? `${data.item}` : `${data.answer}`;
+		const answerId = data.id;
 
-    const answerId = data.id;
+		if (targetElementId === "itemDisplay") {
+			dataBox.setAttribute("draggable", "true");
 
-    if (targetElementId === "itemDisplay") {
-      dataBox.setAttribute("draggable", "true");
-      dataBox.classList.add("item");
+			dataBox.addEventListener("dragstart", (event) => {
+				event.dataTransfer.setData("text/plain", JSON.stringify(data));
+			});
 
-      dataBox.addEventListener("dragstart", (event) => {
-        event.dataTransfer.setData("text/plain", JSON.stringify(data));
-      });
-    } else {
-      dataBox.classList.add("answer");
-    }
+			const divStyleItem = [
+				"bg-violet-100",
+				"text-center",
+				"border-4",
+				"border-violet-400",
+				"rounded-xl",
+				"p-4",
+			];
+			dataBox.classList.add(...divStyleItem);
+		} else {
+			const divStyleAnswer = [
+				"bg-white",
+				"text-center",
+				"border-4",
+				"border-violet-400",
+				"border-dotted",
+				"rounded-xl",
+				"p-4",
+			];
+			dataBox.classList.add(...divStyleAnswer);
+		}
 
-    dataBox.addEventListener("dragover", (event) => {
-      event.preventDefault();
-    });
+		dataBox.addEventListener("dragover", (event) => {
+			event.preventDefault();
+		});
 
-    dataBox.addEventListener("drop", (event) => {
-      event.preventDefault();
+		dataBox.addEventListener("drop", (event) => {
+			event.preventDefault();
 
-      const draggedData = JSON.parse(event.dataTransfer.getData("text/plain"));
+			const draggedData = JSON.parse(event.dataTransfer.getData("text/plain"));
 
-      if (draggedData.id == answerId) {
-        console.log("Match");
-      } else {
-        console.log("No match");
-      }
-    });
+			if (draggedData.id == answerId) {
+				console.log("Match");
+			} else {
+				console.log("No match");
+			}
+		});
 
-    dataBox.appendChild(dataContent);
-    jsonDisplayElement.appendChild(dataBox);
-  });
+		jsonDisplayElement.appendChild(dataBox);
+	});
 }
 
 fetch("data.json")
-  .then((response) => response.json())
-  .then((jsonData) => {
-    displayData(jsonData, "itemDisplay");
+	.then((response) => response.json())
+	.then((jsonData) => {
+		displayData(jsonData, "itemDisplay");
 
-    displayData(jsonData, "answerDisplay");
-  });
+		displayData(jsonData, "answerDisplay");
+	});
