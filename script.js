@@ -1,9 +1,51 @@
+let timer;
+let elapsedTimeSeconds = 0;
+let elapsedTimeMinutes = 0;
+
+window.onload = function () {
+  startTimer();
+};
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function startTimer() {
+  timer = setTimeout(updateTimer, 1000);
+}
+
+function updateTimer() {
+  elapsedTimeSeconds++;
+  if (elapsedTimeSeconds == 60) {
+    elapsedTimeSeconds = 0;
+    elapsedTimeMinutes++;
+  }
+
+  const formattedMinutes = String(elapsedTimeMinutes).padStart(2, "0");
+  const formattedSeconds = String(elapsedTimeSeconds).padStart(2, "0");
+
+  document.getElementById("timer")
+  .innerHTML = `Timer: ${formattedMinutes}:${formattedSeconds}`;
+
+  timer = setTimeout(updateTimer, 1000);
+}
+
+function stopTimer() {
+  clearTimeout(timer);
+  elapsedTime = 0;
+  document.getElementById("timer").innerHTML = "Timer: 0 seconds";
+}
+
 function displayData(jsonData, targetElementId) {
   const jsonDisplayElement = document.getElementById(targetElementId);
 
-  Object.keys(jsonData).forEach((key) => {
-    const data = jsonData[key];
+  const shuffledData = Object.values(jsonData);
+  shuffleArray(shuffledData);
 
+  shuffledData.forEach((data) => {
     const dataBox = document.createElement("div");
 
     dataBox.innerHTML =
