@@ -2,6 +2,8 @@ let timer;
 let elapsedTimeSeconds = 0;
 let elapsedTimeMinutes = 0;
 
+let answered = 0;
+
 window.onload = function () {
   startTimer();
 };
@@ -13,6 +15,8 @@ function shuffleArray(array) {
   }
 }
 
+
+//Timer
 function startTimer() {
   timer = setTimeout(updateTimer, 1000);
 }
@@ -27,17 +31,25 @@ function updateTimer() {
   const formattedMinutes = String(elapsedTimeMinutes).padStart(2, "0");
   const formattedSeconds = String(elapsedTimeSeconds).padStart(2, "0");
 
+
   document.getElementById("timer")
   .innerHTML = `Timer: ${formattedMinutes}:${formattedSeconds}`;
 
   timer = setTimeout(updateTimer, 1000);
-}
+} 
 
 function stopTimer() {
   clearTimeout(timer);
-  elapsedTime = 0;
+  elapsedTimeSeconds = 0;
+  elapsedTimeMinutes = 0;
   document.getElementById("timer").innerHTML = "Timer: 0 seconds";
 }
+//
+
+function gameEnd() {
+  clearTimeout(timer);
+};
+
 
 function displayData(jsonData, targetElementId) {
   const jsonDisplayElement = document.getElementById(targetElementId);
@@ -104,6 +116,10 @@ function displayData(jsonData, targetElementId) {
       if (draggedData.id == answerId) {
         console.log("Match");
         event.target.appendChild(draggingItem);
+        answered++;
+        if(Object.keys(jsonData).length == answered){
+          gameEnd()
+        };
       } else {
         console.log("No match");
       }
