@@ -1,77 +1,297 @@
 {
-	"bibliopole": {
+	"abecedarian": {
 		"id": 1,
-		"item": "Bibliopole",
-		"answer": "Sells rare books."
+		"item": "Abecedarian",
+		"answer": "A person who is learning the alphabet."
 	},
-	"quire": {
+	"bibble": {
 		"id": 2,
-		"item": "Quire",
-		"answer": "Set of 24-25 sheets for bookbinding."
+		"item": "Bibble",
+		"answer": "To eat or drink noisily."
 	},
-	"sesquipedalian": {
+	"callipygian": {
 		"id": 3,
-		"item": "Sesquipedalian",
-		"answer": "Uses long words; long-winded."
+		"item": "Callipygian",
+		"answer": "Having shapely buttocks."
 	},
-	"zarf": {
+	"discombobulate": {
 		"id": 4,
-		"item": "Zarf",
-		"answer": "Metal cup holder without a handle."
-	},
-	"peregrinate": {
-		"id": 5,
-		"item": "Peregrinate",
-		"answer": "Travel or wander around."
-	},
-	"philoprogenitive": {
-		"id": 6,
-		"item": "Philoprogenitive",
-		"answer": "Fond of children; produces offspring."
-	},
-	"quixotic": {
-		"id": 7,
-		"item": "Quixotic",
-		"answer": "Extremely idealistic."
-	},
-	"cacophony": {
-		"id": 8,
-		"item": "Cacophony",
-		"answer": "Harsh, discordant mixture of sounds."
-	},
-	"nudiustertian": {
-		"id": 9,
-		"item": "Nudiustertian",
-		"answer": "Relating to the day before yesterday."
-	},
-	"xenization": {
-		"id": 10,
-		"item": "Xenization",
-		"answer": "Traveling as a stranger in a foreign land."
-	},
-	"bibliopolic": {
-		"id": 11,
-		"item": "Bibliopolic",
-		"answer": "Relating to buying and selling books."
-	},
-	"umbra": {
-		"id": 12,
-		"item": "Umbra",
-		"answer": "Fully shaded inner region of a shadow."
-	},
-	"limerence": {
-		"id": 13,
-		"item": "Limerence",
-		"answer": "Intense infatuation with another person."
+		"item": "Discombobulate",
+		"answer": "To confuse or disconcert; upset."
 	},
 	"ephemeral": {
-		"id": 14,
+		"id": 5,
 		"item": "Ephemeral",
-		"answer": "Lasting for a very short time; transient."
+		"answer": "Lasting for a very short time."
 	},
-	"hapax_legomenon": {
+	"flibbertigibbet": {
+		"id": 6,
+		"item": "Flibbertigibbet",
+		"answer": "A frivolous or flighty person."
+	},
+	"gobbledygook": {
+		"id": 7,
+		"item": "Gobbledygook",
+		"answer": "Language that is meaningless or hard to understand."
+	},
+	"halcyon": {
+		"id": 8,
+		"item": "Halcyon",
+		"answer": "Calm, peaceful, and tranquil."
+	},
+	"ineffable": {
+		"id": 9,
+		"item": "Ineffable",
+		"answer": "Too great or extreme to be expressed in words."
+	},
+	"juxtapose": {
+		"id": 10,
+		"item": "Juxtapose",
+		"answer": "To place or deal with close together for contrasting effect."
+	},
+	"kerfuffle": {
+		"id": 11,
+		"item": "Kerfuffle",
+		"answer": "A commotion or fuss, especially one caused by conflicting views."
+	},
+	"limerence": {
+		"id": 12,
+		"item": "Limerence",
+		"answer": "The intense, involuntary emotional state involving romantic desire for another person."
+	},
+	"mellifluous": {
+		"id": 13,
+		"item": "Mellifluous",
+		"answer": "Sweet or musical; pleasant to hear."
+	},
+	"nebulous": {
+		"id": 14,
+		"item": "Nebulous",
+		"answer": "Hazy, unclear, or ill-defined."
+	},
+	"obfuscate": {
 		"id": 15,
-		"item": "Hapax Legomenon",
-		"answer": "Word or phrase occurring only once in a text."
+		"item": "Obfuscate",
+		"answer": "To deliberately make something unclear or difficult to understand."
+	},
+	"panjandrum": {
+		"id": 16,
+		"item": "Panjandrum",
+		"answer": "A person who has or claims to have great influence or authority."
+	},
+	"quixotic": {
+		"id": 17,
+		"item": "Quixotic",
+		"answer": "Extremely idealistic; unrealistic and impractical."
+	},
+	"recumbentibus": {
+		"id": 18,
+		"item": "Recumbentibus",
+		"answer": "A knockout punch, either verbal or physical."
+	},
+	"susurrus": {
+		"id": 19,
+		"item": "Susurrus",
+		"answer": "Whispering, murmuring, or rustling."
+	},
+	"tintinnabulation": {
+		"id": 20,
+		"item": "Tintinnabulation",
+		"answer": "The ringing or sound of bells."
+	},
+	"uxorious": {
+		"id": 21,
+		"item": "Uxorious",
+		"answer": "Excessively fond of or submissive to one's wife."
+	},
+	"vexillology": {
+		"id": 22,
+		"item": "Vexillology",
+		"answer": "The study of flags."
+	},
+	"whimsy": {
+		"id": 23,
+		"item": "Whimsy",
+		"answer": "Playfully quaint or fanciful behavior or humor."
+	},
+	"xenodocheionology": {
+		"id": 24,
+		"item": "Xenodocheionology",
+		"answer": "The love of hotels."
+	},
+	"yaffle": {
+		"id": 25,
+		"item": "Yaffle",
+		"answer": "To eat or drink noisily."
+	},
+	"zephyr": {
+		"id": 26,
+		"item": "Zephyr",
+		"answer": "A gentle, mild breeze."
+	},
+	"agog": {
+		"id": 27,
+		"item": "Agog",
+		"answer": "Extremely eager or excited."
+	},
+	"bamboozle": {
+		"id": 28,
+		"item": "Bamboozle",
+		"answer": "To deceive or cheat by trickery."
+	},
+	"cacophony": {
+		"id": 29,
+		"item": "Cacophony",
+		"answer": "A harsh, discordant mixture of sounds."
+	},
+	"doodle-sack": {
+		"id": 30,
+		"item": "Doodle-sack",
+		"answer": "A bagpipe."
+	},
+	"ephemeralize": {
+		"id": 31,
+		"item": "Ephemeralize",
+		"answer": "To make something ephemeral or transient."
+	},
+	"fardel": {
+		"id": 32,
+		"item": "Fardel",
+		"answer": "A bundle or burden."
+	},
+	"gargalesthesia": {
+		"id": 33,
+		"item": "Gargalesthesia",
+		"answer": "The sensation caused by tickling."
+	},
+	"inefficacious": {
+		"id": 35,
+		"item": "Inefficacious",
+		"answer": "Lacking the power to produce a desired effect."
+	},
+	"jiggery-pokery": {
+		"id": 36,
+		"item": "Jiggery-pokery",
+		"answer": "Dishonest or suspicious activity."
+	},
+	"knickerbocker": {
+		"id": 37,
+		"item": "Knickerbocker",
+		"answer": "A descendant of the original Dutch settlers of New York."
+	},
+	"lollygag": {
+		"id": 38,
+		"item": "Lollygag",
+		"answer": "To spend time aimlessly; to dawdle."
+	},
+	"mellification": {
+		"id": 39,
+		"item": "Mellification",
+		"answer": "The process of turning a human body into honey."
+	},
+	"nefarious": {
+		"id": 40,
+		"item": "Nefarious",
+		"answer": "Wicked, villainous, or criminal."
+	},
+	"obtuseangle": {
+		"id": 41,
+		"item": "Obtuseangle",
+		"answer": "An angle that is greater than 90 degrees."
+	},
+	"pernicious": {
+		"id": 42,
+		"item": "Pernicious",
+		"answer": "Having a harmful effect, especially in a gradual or subtle way."
+	},
+	"quizzaciously": {
+		"id": 43,
+		"item": "Quizzaciously",
+		"answer": "In a mocking or teasing manner."
+	},
+	"rambunctious": {
+		"id": 44,
+		"item": "Rambunctious",
+		"answer": "Noisy and lacking in restraint or discipline."
+	},
+	"sesquipedalian": {
+		"id": 45,
+		"item": "Sesquipedalian",
+		"answer": "Characterized by long words; long-winded."
+	},
+	"tintinnabulous": {
+		"id": 46,
+		"item": "Tintinnabulous",
+		"answer": "Pertaining to or producing a tinkling sound."
+	},
+	"unputdownable": {
+		"id": 47,
+		"item": "Unputdownable",
+		"answer": "So interesting or gripping that one cannot stop reading."
+	},
+	"verisimilitude": {
+		"id": 48,
+		"item": "Verisimilitude",
+		"answer": "The appearance of being true or real."
+	},
+	"widdershins": {
+		"id": 49,
+		"item": "Widdershins",
+		"answer": "In a direction contrary to the sun's course; counterclockwise."
+	},
+	"xerothermic": {
+		"id": 50,
+		"item": "Xerothermic",
+		"answer": "Thriving in dry, hot climates."
+	},
+	"yarborough": {
+		"id": 51,
+		"item": "Yarborough",
+		"answer": "A hand in cards containing no card above a nine."
+	},
+	"zarf": {
+		"id": 52,
+		"item": "Zarf",
+		"answer": "A holder for a coffee cup without a handle."
+	},
+	"agogic": {
+		"id": 53,
+		"item": "Agogic",
+		"answer": "Relating to or denoting a beat that is sounded longer or more loudly than others in a bar."
+	},
+	"braggadocio": {
+		"id": 54,
+		"item": "Braggadocio",
+		"answer": "Empty boasting or arrogant pretension."
+	},
+	"cryptophasia": {
+		"id": 55,
+		"item": "Cryptophasia",
+		"answer": "Private language developed by twins."
+	},
+	"dendrochronology": {
+		"id": 56,
+		"item": "Dendrochronology",
+		"answer": "The science of dating events, environmental change, and archaeological artifacts by using the characteristic patterns of annual growth rings in timber and tree trunks."
+	},
+	"ephemeron": {
+		"id": 57,
+		"item": "Ephemeron",
+		"answer": "A creature that lives for a day."
+	},
+	"fipple": {
+		"id": 58,
+		"item": "Fipple",
+		"answer": "The mouthpiece of a musical instrument, especially a recorder or a flue pipe."
+	},
+	"gormandize": {
+		"id": 59,
+		"item": "Gormandize",
+		"answer": "To eat greedily and voraciously."
+	},
+	"higgledy-piggledy": {
+		"id": 60,
+		"item": "Higgledy-piggledy",
+		"answer": "In a state of disorder or confusion."
 	}
 }
