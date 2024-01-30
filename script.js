@@ -63,16 +63,12 @@ function gameEnd() {
 	document.getElementById("scorePopup").classList.remove("invisible");
 }
 
-
-
 function displayData(jsonData, targetElementId) {
 	const jsonDisplayElement = document.getElementById(targetElementId);
 
 	shuffleArray(jsonData);
 
-
-
-	console.log(jsonData)
+	console.log(jsonData);
 
 	jsonData.forEach((data) => {
 		const dataBox = document.createElement("div");
@@ -81,7 +77,6 @@ function displayData(jsonData, targetElementId) {
 			targetElementId === "itemDisplay" ? `${data.item}` : `${data.answer}`;
 
 		const answerId = data.id;
-		
 
 		if (targetElementId === "itemDisplay") {
 			dataBox.setAttribute("draggable", "true");
@@ -102,6 +97,8 @@ function displayData(jsonData, targetElementId) {
 				"border-violet-400",
 				"rounded-xl",
 				"p-4",
+				"text-xl",
+				"min-[1920px]:text-2xl",
 			];
 			dataBox.classList.add(...divStyleItem);
 
@@ -128,6 +125,8 @@ function displayData(jsonData, targetElementId) {
 				"items-center",
 				"justify-center",
 				"text-center",
+				"text-xl",
+				"min-[1920px]:text-2xl",
 			];
 			dataBox.classList.add(...divStyleAnswer);
 
@@ -181,7 +180,7 @@ fetch("data.json")
 	.then((response) => response.json())
 	.then((jsonData) => {
 		const shuffledData = Object.values(jsonData);
-	
+
 		const selectedData = shuffledData.slice(0, 15);
 		displayData(selectedData, "itemDisplay");
 		displayData(selectedData, "answerDisplay");
