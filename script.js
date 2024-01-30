@@ -1,3 +1,5 @@
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+
 let timer;
 let elapsedTimeSeconds = 0;
 let elapsedTimeMinutes = 0;
@@ -7,10 +9,14 @@ let answered = 0;
 
 let wrongAnswers = 0;
 
+
 window.onload = function () {
 	startTimer();
 };
 
+function makeConfetti() {
+	confetti()
+}
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
@@ -61,6 +67,8 @@ function gameEnd() {
 	).innerHTML = `Time taken: ${timeTaken} seconds`;
 
 	document.getElementById("scorePopup").classList.remove("invisible");
+
+	makeConfetti()
 }
 
 
@@ -69,10 +77,6 @@ function displayData(jsonData, targetElementId) {
 	const jsonDisplayElement = document.getElementById(targetElementId);
 
 	shuffleArray(jsonData);
-
-
-
-	console.log(jsonData)
 
 	jsonData.forEach((data) => {
 		const dataBox = document.createElement("div");
@@ -181,8 +185,8 @@ fetch("data.json")
 	.then((response) => response.json())
 	.then((jsonData) => {
 		const shuffledData = Object.values(jsonData);
-	
 		const selectedData = shuffledData.slice(0, 15);
+
 		displayData(selectedData, "itemDisplay");
 		displayData(selectedData, "answerDisplay");
 	});
