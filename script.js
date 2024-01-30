@@ -63,21 +63,25 @@ function gameEnd() {
 	document.getElementById("scorePopup").classList.remove("invisible");
 }
 
+
+
 function displayData(jsonData, targetElementId) {
 	const jsonDisplayElement = document.getElementById(targetElementId);
 
-	const shuffledData = Object.values(jsonData);
-	shuffleArray(shuffledData);
+	shuffleArray(jsonData);
 
-	const selectedData = shuffledData.slice(0, 15);
 
-	selectedData.forEach((data) => {
+
+	console.log(jsonData)
+
+	jsonData.forEach((data) => {
 		const dataBox = document.createElement("div");
 
 		dataBox.innerHTML =
 			targetElementId === "itemDisplay" ? `${data.item}` : `${data.answer}`;
 
 		const answerId = data.id;
+		
 
 		if (targetElementId === "itemDisplay") {
 			dataBox.setAttribute("draggable", "true");
@@ -176,6 +180,9 @@ function displayData(jsonData, targetElementId) {
 fetch("data.json")
 	.then((response) => response.json())
 	.then((jsonData) => {
-		displayData(jsonData, "itemDisplay");
-		displayData(jsonData, "answerDisplay");
+		const shuffledData = Object.values(jsonData);
+	
+		const selectedData = shuffledData.slice(0, 15);
+		displayData(selectedData, "itemDisplay");
+		displayData(selectedData, "answerDisplay");
 	});
