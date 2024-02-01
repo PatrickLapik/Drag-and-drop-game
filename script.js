@@ -157,6 +157,8 @@ function displayData(jsonData, targetElementId) {
 
 					target.appendChild(draggingItem);
 
+					draggingItem.removeAttribute("draggable")
+
 					target.classList.remove("border-violet-400");
 					target.classList.add("border-green-400");
 
