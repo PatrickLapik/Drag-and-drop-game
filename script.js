@@ -184,7 +184,8 @@ function displayData(jsonData, targetElementId) {
 fetch("data.json")
 	.then((response) => response.json())
 	.then((jsonData) => {
-		const shuffledData = Object.values(jsonData);
+		let shuffledData = Object.values(jsonData);
+		shuffleArray(shuffledData);
 
 		const selectedData = shuffledData.slice(0, 15);
 
